@@ -16,6 +16,6 @@ RUN pip3 install -r requirements.txt
 COPY . /docker-image
 
 # Add this to avoid "Error: Could not locate a Flask application. Use the 'flask --app' option, 'FLASK_APP' environment variable, or a 'wsgi.py' or 'app.py' file in the current directory"
-ENV FLASK_APP=api.py
+ENV FLASK_APP=/api/api.py
 
 CMD ["python3", "-m" , "flask", "run", "--host=0.0.0.0"]
